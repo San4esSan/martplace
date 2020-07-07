@@ -8,8 +8,8 @@ let gulp = require('gulp'),
 	cssmin = require('gulp-cssmin');
 
 gulp.task('sass', function(){              	   //короче - делай следующее:
-	return gulp.src('app/scss/style.scss')			//бери данный файл
-	.pipe(sass({outputStyle: 'compressed'}))		//прессуй его
+	return gulp.src('app/scss/**/*.scss')			//в папке scss бери из всех папках все файлы с расширением .scss
+	.pipe(sass({outputStyle: 'extended'}))		//прессуй его    compressed
 	.pipe(rename({suffix: '.min'}))					//добавляй к имени файла .min
 	.pipe(autoprefixer({
 		overrideBrowserslist: ['last 8 versions']	//подрубаем autoprefixer с поддержкой последних 8 версий
@@ -58,7 +58,7 @@ gulp.task('browser-sync', function() {
 });
 
 gulp.task('watch', function(){											//дорагуша 
-	gulp.watch('app/scss/style.scss', gulp.parallel('sass'))		//следи за файлом style.scss, и если произошли изменения запускай таск sass
+	gulp.watch('app/scss/**/*.scss', gulp.parallel('sass'))		//следи за файлом style.scss, и если произошли изменения запускай таск sass
 	gulp.watch('app/*.html', gulp.parallel('html'))					//следи за всеми файлами .html, и если произошли изменения запускай таск html
 	gulp.watch('app/js/*.js', gulp.parallel('js')) 					//следи за всеми файлами .js, и если произошли изменения запускай таск js
 });
