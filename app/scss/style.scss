@@ -249,7 +249,7 @@
 		border-radius: 4px;
 		background-color: #fff;
 		box-shadow: 0px 2px 4px 0px rgba(108, 111, 115, 0.1);
-		width: 1140px;
+		max-width: 1140px;
 		height: 110px;
 		padding: 0 30px 0 30px;
 		margin-bottom: 30px;
@@ -265,11 +265,12 @@
 	}
 	&__inner-btn {
 		display: flex;
+		flex-wrap: wrap;
 		align-items: center;
 		border-radius: 4px;
 		background-color: #fff;
 		box-shadow: 0px 1px 2px 0px rgba(90, 93, 100, 0.1);
-		width: 1140px;
+		max-width: 1140px;
 		height: 92px;
 		font-size: 15px;
 		font-weight: 500;
@@ -364,6 +365,9 @@
 		transition: all 0.4s;
 		&:hover {
 			background-image: url(../images/content/product-item-hover.jpg);
+			.products__item-btn{
+				display: block;
+			}
 		}
 	}
 	&-content {
@@ -458,6 +462,7 @@
 		}
 	}
 }
+
 .products__button {
 	text-align: center;
 }
@@ -492,7 +497,7 @@
 		margin-bottom: 50px;
 		&-name {
 			font-size: 30px;
-			color: #000;			
+			color: #000;
 		}
 	}
 }
@@ -507,8 +512,8 @@
 .slick-arrow {
 	border: none;
 	position: absolute;
-	outline: none;	
-	background-color: rgba(255,255,255,.0);
+	outline: none;
+	background-color: rgba(255, 255, 255, 0);
 	cursor: pointer;
 }
 .click-prev {
@@ -518,4 +523,36 @@
 .click-next {
 	right: 50px;
 	top: -113px;
+}
+
+// end.products-slider
+
+// start advantages
+.advantages {
+	padding: 185px 0 94px;
+	&__inner {
+		display: flex;
+		justify-content: space-between;
+		:hover {			
+			border-radius: 4px;
+			background-color: rgb(255, 255, 255);
+			box-shadow: 0px 2px 50px 0px rgba(0, 0, 0, 0.08);
+		}
+	}
+	&__item {
+		max-width: 361px;
+		padding: 40px 30px 50px;
+		text-align: center;
+		transition: all 0.4s;
+	}
+	&__title {
+		font-size: 24px;
+		padding-top: 34px;		
+	}
+	&__text {
+		font-size: 16px;
+		line-height: 30px;
+		color: #555555;
+		padding-top: 20px;	
+	}
 }
