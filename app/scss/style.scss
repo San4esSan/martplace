@@ -594,30 +594,61 @@
 }
 // end information
 
+// start guarantee
+
+.guarantee {
+	&__inner {
+		display: flex;
+		justify-content: space-around;
+		text-align: center;
+		&-money {
+			padding: 60px 0;
+			border-right: 1px solid #e8eaf3;
+			width: 50%;
+		}
+		&-support {
+			padding: 60px 0;
+			width: 50%;
+		}
+		&-icon1 {
+			padding-bottom: 26px;
+		}
+		&-icon2 {
+			padding-bottom: 26px;
+		}
+		&-text{
+			font-size: 24px;
+			span{
+				color: #0674ec
+			}
+		}
+	}
+}
+
+// end guarantee
+
 // start ready
-.ready{
+.ready {
 	padding: 110px 0;
 	text-align: center;
-	&__inner-title{
-		
+	&__inner-title {
 		font-size: 36px;
-		color: #fff;				
+		color: #fff;
 	}
-	&__inner-text{
+	&__inner-text {
 		color: #e7e7e7;
 		padding-top: 20px;
 	}
-	
 }
 
 .ready__btn {
 	height: 55px;
 	width: 190px;
-	font-size: 16px;	
+	font-size: 16px;
 	color: #0674ec;
 	background-color: #fff;
-	border-radius: 50px;	
-	padding-top: 16px;	
+	border-radius: 50px;
+	padding-top: 16px;
 	margin-top: 50px;
 }
 // end ready
