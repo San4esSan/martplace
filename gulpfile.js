@@ -1,4 +1,4 @@
-let gulp = require('gulp'),
+﻿let gulp = require('gulp'),
 	sass = require('gulp-sass'),
 	rename = require('gulp-rename'),
 	browserSync = require('browser-sync'),
@@ -23,7 +23,8 @@ gulp.task('style', function(){
 		'node_modules/normalize.css/normalize.css', 							//бери данный файл
 		'node_modules/slick-carousel/slick/slick.css',						//бери данный файл
 		'node_modules/magnific-popup/dist/magnific-popup.css',			//бери данный файл
-		'node_modules/rateyo/src/jquery.rateyo.css'		
+		'node_modules/rateyo/src/jquery.rateyo.css',
+		'node_modules/ion-rangeslider/css/ion.rangeSlider.css'	
 	])
 	.pipe(concat('libs.min.css'))													//и объединяй их в этом файле	
 	.pipe(cssmin())																	//минифицуруй его
@@ -35,7 +36,8 @@ gulp.task('script', function(){
 		'node_modules/slick-carousel/slick/slick.js',						//бери данный файл
 		'node_modules/magnific-popup/dist/jquery.magnific-popup.js',	//бери данный файл
 		'node_modules/mixitup/dist/mixitup.js',
-		'node_modules/rateyo/src/jquery.rateyo.js'	
+		'node_modules/rateyo/src/jquery.rateyo.js',
+		'node_modules/ion-rangeslider/js/ion.rangeSlider.js'	
 	])
 	.pipe(concat('libs.min.js'))													//и объединяй их в этом файле
 	.pipe(uglify())																	//минифицуруй его
@@ -61,7 +63,7 @@ gulp.task('browser-sync', function() {
 });
 
 gulp.task('watch', function(){											//дорагуша 
-	gulp.watch('app/scss/**/*.scss', gulp.parallel('sass'))		//следи за файлом style.scss, и если произошли изменения запускай таск sass
+	gulp.watch('app/scss/**/*.scss', gulp.parallel('sass'))		//следи за всеми файлами с расширением .scss во всех папках в папке scss, и если произошли изменения запускай таск sass
 	gulp.watch('app/*.html', gulp.parallel('html'))					//следи за всеми файлами .html, и если произошли изменения запускай таск html
 	gulp.watch('app/js/*.js', gulp.parallel('js')) 					//следи за всеми файлами .js, и если произошли изменения запускай таск js
 });

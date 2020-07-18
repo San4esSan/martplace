@@ -10,6 +10,7 @@ html,
 body {
 	height: 100%;
 }
+
 a {
 	display: inline-block;
 	text-decoration: none;
@@ -27,8 +28,6 @@ body {
 	line-height: 24px;
 	color: $text;
 }
-
-
 .wrapper {
 	display: flex;
 	flex-direction: column;
@@ -40,9 +39,6 @@ body {
 .footer {
 	flex: 0 0 auto;
 }
-
-
-
 .container {
 	max-width: 1170px;
 	margin: 0 auto;
@@ -51,4 +47,21 @@ body {
 .rate-star {
 	display: inline-block;
 	margin-left: 14px;
+}
+.title-inner {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	border-radius: 4px;
+	background-color: #fff;
+	box-shadow: 0px 2px 4px 0px rgba(108, 111, 115, 0.1);
+	max-width: 1140px;
+	min-height: 110px;
+	padding: 0 30px 0 30px;
+	margin-bottom: 50px;
+}
+.title {
+	font-size: 30px;
+	color: #000;
+	line-height: 60px;
 }
