@@ -44,6 +44,15 @@ $('.icon-grid').on('click', function(){
 	$('.icon-list').removeClass('active');
 	$('.icon-grid').addClass('active');
 });
+
+$('.menu__btn').on('click', function(){
+	$('.header__menu__list').slideToggle();
+})
+
+$('.header__btn-menu').on('click', function(){
+	$('.header__box').toggleClass('active');
+})
+
   
 var mixer = mixitup('.products__inner-box');
 });
