@@ -33,16 +33,16 @@ $(function () {
         prefix: "$"
   });
 
-$('.icon-list').on('click', function(){
+$('.icon-List').on('click', function(){
 	$('.products__item').addClass('list');
-	$('.icon-list').addClass('active');
-	$('.icon-grid').removeClass('active');
+	$('.icon-List').addClass('active');
+	$('.icon-Grid').removeClass('active');
 });
 
-$('.icon-grid').on('click', function(){
+$('.icon-Grid').on('click', function(){
 	$('.products__item').removeClass('list');
-	$('.icon-list').removeClass('active');
-	$('.icon-grid').addClass('active');
+	$('.icon-List').removeClass('active');
+	$('.icon-Grid').addClass('active');
 });
 
 $('.menu__btn').on('click', function(){
