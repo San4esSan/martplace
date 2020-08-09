@@ -134,7 +134,7 @@
 														<div class="circle__message-thema">Hello John Smith! Nunc placeratid...</div>
 													</div>
 												</div>
-											</div>											
+											</div>
 										</div>
 									</div>
 
@@ -181,7 +181,7 @@
 									</div>
 
 									<div class="user__box">
-										<a class="user" href="#">
+										<a class="user" data-fancybox data-src="#modal" href="javascript:;">
 											<div class="user__inner">
 												<div class="user__images">
 													<img src="images/header-photo.jpg" alt="">
@@ -1438,10 +1438,40 @@
 				</div>
 			</div>
 		</footer>
-
-
-
 	</div>
+
+	<div id="modal">
+		<div class="login__wrapper">
+			<div class="login__title">
+				<div class="login__title-name">Welcome Back</div>
+				<div class="login__title-text">You can sign in with your username</div>
+			</div>
+			<form>
+				<div class="login__title-username">
+					Username
+				</div>
+				<input type="text" placeholder="Enter your username..." required>
+				<div class="login__title-pass">
+					Password
+				</div>
+				<input type="text" placeholder="Enter your password..." required>
+				<div class="login__remember">
+					<input type="checkbox" id="singlelicence"><label for="singlelicence">Remember me</label>
+				</div>
+				<button type="submit">Login Now</button>
+				<div class="login__link">
+					<div class="">Lost your <a href="#"> username </a>
+						or <a href=""> password?</a>
+					</div>
+					<div class="">
+						Don't have an <a href="#">account?</a>
+					</div>					
+				</div>
+
+			</form>
+		</div>
+	</div>
+
 
 
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
